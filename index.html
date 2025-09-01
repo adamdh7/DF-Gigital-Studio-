@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <!-- Empêche le zoom (user requested) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>DF Digital Studio</title>
+  <meta name="description" content="DF Digital Studio — Montage vidéo, logo, site web" />
+  <style>
+    :root{--bg:#ffffff;--text:#0b1220;--muted:#6b7280;--accent:#0b74da;--maxw:1100px}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;-webkit-text-size-adjust:100%;touch-action:pan-y}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}/* Header full-width with centered logo */
+.site-header{width:100%;background:var(--bg);border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:center;padding:18px 24px;gap:16px}
+.logo{width:96px;height:96px;object-fit:cover;border-radius:10px;box-shadow:0 6px 22px rgba(15,23,42,0.06)}
+.brand{display:none}
+nav.main-nav{display:flex;gap:18px;margin-top:8px}
+nav.main-nav a{color:var(--text);text-decoration:none;font-weight:700}
+
+/* Layout */
+.hero{padding:36px 0;display:flex;gap:30px;align-items:center;justify-content:center}
+.hero .lead{flex:1;max-width:900px}
+.hero h1{margin:0;font-size:28px;text-align:center}
+.lead p{color:var(--muted);margin:12px 0 0 0;max-width:820px;text-align:center}
+
+section{padding:26px 0;border-top:1px solid #f4f4f4}
+h2{font-size:20px;margin:0 0 10px 0}
+.muted{color:var(--muted);font-size:15px}
+
+/* Services list */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{padding:14px;border-radius:10px;border:1px solid #f0f0f0;background:#fff;box-shadow:0 6px 18px rgba(12,12,12,0.02)}
+
+/* Video */
+.video-wrap{max-width:900px;margin:0 auto}
+video{width:100%;height:auto;border-radius:8px;border:1px solid #eee}
+
+/* Big bottom text */
+.big-text{max-width:1000px;margin:30px auto 60px auto;padding:18px;border-radius:10px;background:#fafafa;border:1px solid #f0f0f0}
+.big-text p{margin:12px 0;color:var(--text);line-height:1.6}
+.big-text ul{margin:8px 0 12px 18px}
+.big-text li{margin:8px 0}
+
+footer{padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(12px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+.reveal.in-view{opacity:1;transform:none}
+
+@media (max-width:800px){
+  nav.main-nav{display:none}
+  .logo{width:84px;height:84px}
+  .hero h1{font-size:22px}
+}
+
+  </style>
+</head>
+<body>
+  <!--
+    REMARQUES :
+    - Remplace LOGO_URL_HERE par l'URL de ton logo carré.
+    - Remplace VIDEO_URL_HERE par l'URL du fichier vidéo (mp4) ou laisse vide pour insérer plus tard.
+    - Le zoom est désactivé via meta viewport (user-scalable=no) et protections JS/CSS.
+    - Tout le texte fourni est placé en bas dans la section #tout-texte.
+  -->  <header class="site-header">
+    <!-- LOGO URL: remplace ici -->
+    <a href="/" title="DF Digital Studio"><img class="logo" src="https://res.cloudinary.com/dckwrqrur/image/upload/v1756752093/tf-stream-url/IMG-20250901-WA0654_vwkcev.jpg" alt="Logo DF Digital Studio"></a>
+  </header>  <main class="container">
+    <!-- Hero -->
+    <section id="home" class="hero reveal">
+      <div class="lead">
+        <h1>Nos Services — Ta vision, notre mission.</h1>
+        <p class="muted">Bienvenue chez <strong>DF Digital Studio</strong>, un collectif jeune, passionné, et engagé pour faire <em>briller tes idées dans le digital</em>. Ici, que tu sois <em>créateur de contenu, entrepreneur, ou juste curieux</em>, tu trouveras ta place.</p>
+      </div>
+    </section><!-- Services -->
+<section id="services" class="reveal">
+  <h2 style="text-align:center">Services rapides</h2>
+  <div class="services">
+    <div class="card">
+      <h4>Montage vidéo</h4>
+      <p class="muted">Rendu propre, viral et esthétique — optimisé pour les formats modernes.</p>
+    </div>
+    <div class="card">
+      <h4>Logos & branding</h4>
+      <p class="muted">Identité visuelle unique et mémorable.</p>
+    </div>
+    <div class="card">
+      <h4>Sites vitrines</h4>
+      <p class="muted">Sites rapides, responsive et professionnels.</p>
+    </div>
+    <div class="card">
+      <h4>Support & automatisation</h4>
+      <p class="muted">Intégrations, paiements et systèmes simples.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Video section -->
+<section id="video" class="reveal">
+  <h2 style="text-align:center">Voulez-Vous plus de details?</h2>
+  <p class="muted" style="text-align:center">Regardez cette vidéo pour en savoir plus. Pour plus d’explications, cette vidéo vous sera utile. <code>Cette</code> video change le plus souvent pour plus de detail</p>
+  <div class="video-wrap">
+    <!-- VIDEO URL: remplace VIDEO_URL_HERE par un lien mp4 ou laisse pour remplacer plus tard -->
+    <video controls width="720" height="405" src="https://res.cloudinary.com/dckwrqrur/video/upload/v1756752441/tf-stream-url/VID-20250901-WA1062_r97t7w.mp4" poster="" preload="metadata">
+      Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+  </div>
+</section>
+
+<!-- GRAND BLOC TEXTE: tout en bas -->
+<section id="tout-texte" class="reveal">
+  <div class="big-text">
+    <p><strong>Une équipe. Plusieurs talents. Un seul objectif : t’emmener plus loin.</strong></p>
+    <p>Chez <em>DF Digital Studio</em>, on ne fait pas juste “des services”. On construit des projets, on transforme des idées, on donne du <em>style</em> à ta présence digitale.</p>
+    <ul>
+      <li>Un crew de monteurs vidéo pour faire exploser ton contenu.</li>
+      <li>Une team web qui te crée des sites pro sans prise de tête.</li>
+      <li>Des créatifs qui te pondent un logo qui parle avant même que tu ouvres la bouche.</li>
+      <li>Et des gars du digital prêts à tout connecter pour te simplifier la vie (streaming, automatisation, PayPal Afrique, etc).</li>
+    </ul>
+    <p>Pas de chichi. Pas de blabla. Juste une <em>équipe jeune, passionnée</em>, et <em>déterminée</em> à te faire briller dans le monde digital.</p>
+
+    <h3>Notre Équipe — Une force digitale unie.</h3>
+    <p>Derrière <em>DF Digital Studio</em>, il y a une <em>équipe soudée</em>, composée de jeunes passionnés par le digital. Chaque membre apporte sa compétence, son énergie, et sa vision pour faire avancer ton projet.</p>
+    <ul>
+      <li>Une équipe créative spécialisée dans <em>le montage vidéo</em>, prête à transformer n’importe quel clip en une vidéo impactante, moderne, et engageante.</li>
+      <li>Une équipe technique qui s’occupe de <em>la création de sites web</em>, de pages interactives, et de solutions sur-mesure pour te rendre visible et crédible en ligne.</li>
+      <li>Une cellule graphique dédiée à <em>la création de logos, de visuels et d’identités de marque</em> cohérentes, professionnelles, et stylées.</li>
+      <li>Et un pôle digital qui explore les outils modernes : <em>streaming, automatisation, outils numériques</em>, et conseils stratégiques pour booster ta présence.</li>
+    </ul>
+    <p>Nous ne sommes pas juste une équipe : Nous sommes une <em>vision commune</em>, construite autour de la passion, du respect, et de la volonté de grandir <em>avec toi</em>.</p>
+
+    <h3>Nos Services — Ta vision, notre mission.</h3>
+    <p>Bienvenue chez <em>DF Digital Studio</em>, un collectif jeune, passionné, et engagé pour faire <em>briller tes idées dans le digital</em>. Ici, que tu sois <em>créateur de contenu, entrepreneur, ou juste curieux</em>, tu trouveras ta place.</p>
+    <p>Tu veux lancer ton projet ? Tu veux juste une vidéo stylée pour TikTok ? Tu veux un logo qui tape ou un site qui claque ? On est là.</p>
+
+    <h4>Ce qu’on fait ?</h4>
+    <ul>
+      <li><em>Montages vidéo pro et dynamiques</em> — Reels, TikTok, vidéos YouTube... Tu nous donnes des clips simples, on te rend un rendu propre, viral, esthétique, et adapté à ton style.</li>
+      <li><em>Logos & branding</em> — Tu veux marquer les esprits ? Un logo, une identité visuelle, une vraie présence en ligne ? On le fait avec toi. Unique. Mémorable.</li>
+      <li><em>Création de sites web</em> — Site vitrine, landing page, page de contact, tout est possible. On rend ta présence digitale <em>visible, accessible et professionnelle</em>.</li>
+      <li><em>Support digital & automatisation</em> — Tu veux connecter un paiement ? Gérer ton business ? Créer un système propre ? On te conseille, on t’accompagne, et on te simplifie la vie.</li>
+    </ul>
+
+    <h4>Pourquoi nous ?</h4>
+    <p>Parce qu’on est comme toi : jeunes, motivés, sans gros budget mais avec de grandes idées. On bosse sérieusement, <em>avec ou sans argent</em>, car chaque projet mérite du respect.</p>
+
+    <h3>Bienvenue chez DF Digital Studio</h3>
+    <p>Vous cherchez une équipe sérieuse, jeune et passionnée pour donner vie à vos projets digitaux ? <em>Vous êtes au bon endroit.</em></p>
+    <p><em>DF Digital Studio</em>, c’est une petite équipe dynamique spécialisée en :</p>
+    <ul>
+      <li><em>Design graphique (logos, visuels)</em></li>
+      <li><em>Création de sites & applis mobiles</em></li>
+      <li><em>Montage vidéo & automatisation en ligne</em></li>
+      <li><em>Solutions digitales simples et efficaces</em></li>
+    </ul>
+    <p>Nous croyons qu’un bon projet commence par la confiance, l’écoute et la créativité. Pas besoin d’être une grande entreprise pour avoir une présence professionnelle en ligne.</p>
+    <p>Avec <em>DF</em>, vous avez :</p>
+    <ul>
+      <li>✓ Une équipe accessible</li>
+      <li>✓ Des idées modernes</li>
+      <li>✓ Des résultats concrets</li>
+    </ul>
+    <p><em>On travaille sérieusement, avec passion — pour que vos idées prennent vie.</em></p>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container">
+      <div>D'H7 | Tergene</div>
+    </div>
+  </footer>  <script>
+    // IntersectionObserver pour reveal on scroll
+    (function(){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting) e.target.classList.add('in-view');
+        });
+      },{threshold:0.12});
+      document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    })();
+
+    // Empêche zoom via gestes sur iOS (détection double-tap) : empêche double-tap zoom
+    let lastTouch = 0;
+    document.addEventListener('touchend', function(e){
+      const now = Date.now();
+      if(now - lastTouch <= 300){ e.preventDefault(); }
+      lastTouch = now;
+    }, {passive:false});
+   </script>
+ </body>
+  </html>
