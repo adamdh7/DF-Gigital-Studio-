@@ -1,9 +1,9 @@
+
 const CACHE_NAME = "df-digital-studio-v1";
 const urlsToCache = [
   "/",
   "/index.html",
   "/manifest.json",
-  "https://res.cloudinary.com/dckwrqrur/image/upload/v1756758462/tf-stream-url/IMG-20250901-WA0656_wgeguu.jpg",
   "https://res.cloudinary.com/dckwrqrur/image/upload/v1756758462/tf-stream-url/IMG-20250901-WA0656_wgeguu.jpg"
 ];
 
@@ -11,7 +11,9 @@ const urlsToCache = [
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
+      return cache.addAll(urlsToCache).catch(err => {
+        console.error("Erreur lors de l’ajout au cache:", err);
+      });
     })
   );
 });
@@ -21,7 +23,8 @@ self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.filter(name => name !== CACHE_NAME)
+        cacheNames
+          .filter(name => name !== CACHE_NAME)
           .map(name => caches.delete(name))
       );
     })
