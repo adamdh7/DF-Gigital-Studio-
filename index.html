@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>DF Digital Studio</title>
   <meta name="description" content="DF Digital Studio — Montage vidéo, logo, site web" />
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b74da">
+
+<!-- iOS support -->
+<link rel="apple-touch-icon" href="logo192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <style>
     :root{--bg:#ffffff;--text:#0b1220;--muted:#6b7280;--accent:#0b74da;--maxw:1100px}
     *{box-sizing:border-box}
@@ -253,5 +260,12 @@
       lastTouch = now;
     }, {passive:false});
   </script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(reg => console.log("Service Worker enregistré:", reg.scope))
+      .catch(err => console.error("Service Worker erreur:", err));
+  }
+</script>
 </body>
-                                          </html>
+  </html>
